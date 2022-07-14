@@ -5,21 +5,21 @@ Grinds are the main way to get resources. To add a new grind, go to the "grinds"
 ```
 grinds: [
     {
-        name: "surface",                                // Name of the grind
+        name: "Empty Space",                                // Name of the grind
         unlocked: true,                                 // If true, the grind will be unlocked when the area is unlocked
-        auto: ["dirt hut"],                             // List of items that will automatically grind this grind
-        background: "images/grinds/overworld.png",      // Background image of the grind
+        auto: ["Quantum Fluctuations"],                             // List of items that will automatically grind this grind
+        background: "https://th.bing.com/th/id/OIP.MncEv6RZ5QG60CW10_fckAHaEK?w=305&h=180&c=7&r=0&o=5&pid=1.7",      // Background image of the grind
         resources: [                                    // List of the different resources in the grind
             {
-                id: "stick",                            // Name/id of resource        
-                time: [["", 0.5]],                      // Time to grind with different tools
-                image: "stick",                         // Image of the resource, can either be a link/path or a resource name
+                id: "Quark",                            // Name/id of resource        
+                time: [["", 1]],                      // Time to grind with different tools
+                image: "https://th.bing.com/th/id/OIP.mziBek7Xrvvscl6--qwOuQHaHa?w=194&h=194&c=7&r=0&o=5&pid=1.7",                         // Image of the resource, can either be a link/path or a resource name
                 probability: 50,                        // The higher the number, the more likely you are to get this resource
             },
             {
-                id: "dirt",
-                time: [["", 0.6]],
-                image: "dirt",
+                id: "Anti Quark",
+                time: [["", 1]],
+                image: "https://th.bing.com/th/id/OIP.sA9eOrRgomAe8AvSPLSjSQHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",
                 probability: 50,
             },
         ]

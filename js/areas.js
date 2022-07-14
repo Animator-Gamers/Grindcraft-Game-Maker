@@ -1,9 +1,9 @@
 // Game Info
 
 let gameInfo = {
-    name: "My Grindcraft Game",                         // The name of your game!
-    icon: "images/system/blank.png",                    // Link or path to an icon image for your game!
-    ID: "myGrindcraftGame",                             // Your game's ID! Should be unique for every game!
+    name: "Animator's Grindcraft Game",                         // The name of your game!
+    icon: "https://media.discordapp.net/attachments/991091615605088266/997204468502380544/Time_Overseer.png?width=702&height=702",                    // Link or path to an icon image for your game!
+    ID: "AnimatorsGrindcraftGame",                             // Your game's ID! Should be unique for every game!
 };
 
 // Resources
