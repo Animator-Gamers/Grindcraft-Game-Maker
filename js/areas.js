@@ -16,17 +16,23 @@ addResources(                                           // Function for adding a
     AntiQuark: {
         image: "https://th.bing.com/th/id/OIP.Ost7sfuf6n2v4CTZGKNZIgHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",
     },
-    planks: {
-        image: "images/planks.png",
+    Electron: {
+        image: "https://th.bing.com/th/id/OIP.R6zNVixl9r2PPZzOc4CD6wHaHa?w=193&h=193&c=7&r=0&o=5&pid=1.7",
     },
-    door: {
-        image: "images/door.png",
+    "Energy": {
+        image: "https://th.bing.com/th/id/OIP._J-EccPvpQbtnzCql5yUfAHaG2?w=179&h=180&c=7&r=0&o=5&pid=1.7",
     },
-    "crafting table": {
-        image: "images/craftingTable.png",
+    "Quantum Fluctuations": {
+        image: "https://th.bing.com/th/id/OIP.8b4CfWw_YYk7nQBnk-jbkQHaKe?w=117&h=180&c=7&r=0&o=5&pid=1.7",
     },
-    "dirt hut": {
-        image: "images/dirtHut.png",
+    "Proton": {
+        image: "https://th.bing.com/th/id/OIP.3HRhxp1NYXe4qiwq1DhX0gHaHa?w=217&h=217&c=7&r=0&o=5&pid=1.7",
+    },
+    "Neutron": {
+        image: "https://th.bing.com/th/id/OIP.eGUcY3Kcdsbnwqo1mF20NgAAAA?w=188&h=188&c=7&r=0&o=5&pid=1.7",
+    },
+    "Atom": {
+        image: "https://th.bing.com/th/id/OIP.A-jreMIp1-PAiOGTOdiJygHaHa?w=173&h=180&c=7&r=0&o=5&pid=1.7",
     },
 }
 );
@@ -49,21 +55,21 @@ addArea("c",                                            // Function for adding a
             resources: [
                 {
                     id: "Quark",
-                    time: [["", 0,5]],
+                    time: [["", 0.5]],
                     image: "https://th.bing.com/th/id/OIP.mziBek7Xrvvscl6--qwOuQHaHa?w=194&h=194&c=7&r=0&o=5&pid=1.7",
                     probability: 50,
                 },
                 {
                     id: "AntiQuark",
                     image: "https://th.bing.com/th/id/OIP.Ost7sfuf6n2v4CTZGKNZIgHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",
-                    time: [["", 0,5]],
+                    time: [["", 0.5]],
                     probability: 50,
                 },
                 {
                     id: "Electron",
                     image: "https://th.bing.com/th/id/OIP.R6zNVixl9r2PPZzOc4CD6wHaHa?w=193&h=193&c=7&r=0&o=5&pid=1.7",
-                    time: [["", 0,5]],
-                    probability: 50,
+                    time: [["", 0.8]],
+                    probability: 10,
                 },
             ]
         },
@@ -89,30 +95,36 @@ addArea("c",                                            // Function for adding a
             cost: [["Electron", 0]],
         },
         {
-            name: "planks",
-            desc: "Used to make a crafting table",
+            name: "Proton",
+            desc: "Used to make Atoms",
             type: "craft",
-            cost: [["stick", 2]],
+            cost: [["Quark", 3], ["Energy", 3]],
         },
         {
-            name: "crafting table",
-            desc: "Required to build a dirt hut",
+            name: "Neutron",
+            desc: "Used to make Atoms",
             type: "craft",
-            cost: [["planks", 4]],
+            cost: [["Quark", 3], ["Energy", 3]],
         },
         {
-            name: "door",
-            desc: "Required to build a dirt hut",
+            name: "Energy",
+            desc: "Required to make a lot of things",
             type: "craft",
-            amount: 3,
-            cost: [["planks", 6]],
+            amount: 1,
+            cost: [["AntiQuark", 2]],
         },
         {
-            name: "dirt hut",
-            desc: "Required to beat the game!",
+            name: "Atom",
+            desc: "Required to make a lot of things",
             type: "craft",
-            cost: [["dirt", 23], ["crafting table", 1], ["door", 1]],
-            message: "You have beaten the game!",
+            cost: [["Proton", 5], ["Neutron", 5], ["Electron", 10], ["Energy", 15]],
+        },
+        {
+            name: "Quantum Fluctuations",
+            desc: "Automatically grinds Empty Space",
+            type: "craft",
+            cost: [["Energy", 30], ["Atom", 3]],
+            message: "Empty Space is now automated! Good Job!",
         },
     ],
 
