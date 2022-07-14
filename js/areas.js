@@ -10,11 +10,11 @@ let gameInfo = {
 
 addResources(                                           // Function for adding all the resources (items/tools/buildings) that are used in your game!
     {
-    dirt: {
-        image: "images/dirt.png",
+    Quark: {
+        image: "https://th.bing.com/th/id/OIP.mziBek7Xrvvscl6--qwOuQHaHa?w=194&h=194&c=7&r=0&o=5&pid=1.7",
     },
-    stick: {
-        image: "images/stick.png",
+    AntiQuark: {
+        image: "https://th.bing.com/th/id/OIP.Ost7sfuf6n2v4CTZGKNZIgHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",
     },
     planks: {
         image: "images/planks.png",
@@ -35,28 +35,34 @@ addResources(                                           // Function for adding a
 
 addArea("c",                                            // Function for adding areas to your game
 {
-    name: "City State",
-    image: "images/areas/cityState.png",
+    name: "Universe",
+    image: "https://th.bing.com/th?id=OIF.pZUSY%2fVfpD8xX4%2fooMPnLg&w=161&h=180&c=7&r=0&o=5&pid=1.7",
     unlocked: true,
     updateWhileUnactive: true,
 
     grinds: [
         {
-            name: "surface",
+            name: "Empty Space",
             unlocked: true,
-            auto: ["dirt hut"],                         // List of items that will auto-grind this grind
-            background: "images/grinds/overworld.png",
+            auto: ["Quantum Fluctuations"],                         // List of items that will auto-grind this grind
+            background: "https://th.bing.com/th/id/OIP.MncEv6RZ5QG60CW10_fckAHaEK?w=305&h=180&c=7&r=0&o=5&pid=1.7",
             resources: [
                 {
-                    id: "stick",
-                    time: [["", 0.5]],
-                    image: "stick",
+                    id: "Quark",
+                    time: [["", 0,5]],
+                    image: "https://th.bing.com/th/id/OIP.mziBek7Xrvvscl6--qwOuQHaHa?w=194&h=194&c=7&r=0&o=5&pid=1.7",
                     probability: 50,
                 },
                 {
-                    id: "dirt",
-                    image: "dirt",
-                    time: [["", 0.6]],
+                    id: "AntiQuark",
+                    image: "https://th.bing.com/th/id/OIP.Ost7sfuf6n2v4CTZGKNZIgHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",
+                    time: [["", 0,5]],
+                    probability: 50,
+                },
+                {
+                    id: "Electron",
+                    image: "https://th.bing.com/th/id/OIP.R6zNVixl9r2PPZzOc4CD6wHaHa?w=193&h=193&c=7&r=0&o=5&pid=1.7",
+                    time: [["", 0,5]],
                     probability: 50,
                 },
             ]
@@ -65,16 +71,22 @@ addArea("c",                                            // Function for adding a
 
     crafts: [
         {
-            name: "stick",
-            desc: "Used to craft planks",
+            name: "Quark",
+            desc: "Used to make Protons and Neutrons",
             type: "display",
-            cost: [["stick", 0]],
+            cost: [["Quark", 0]],
         },
         {
-            name: "dirt",
-            desc: "Used to build a dirt hut",
+            name: "AntiQuark",
+            desc: "Used to make Energy",
             type: "display",
-            cost: [["dirt", 0]],
+            cost: [["AntiQuark", 0]],
+        },
+        {
+            name: "Electron",
+            desc: "Used to make Atoms",
+            type: "display",
+            cost: [["Electron", 0]],
         },
         {
             name: "planks",
